@@ -1,0 +1,32 @@
+@use '../abstracts/' as *;
+
+.task-footer {
+  display: flex;
+  button {
+    padding: 16px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 1 1 50%;
+    gap: 16px;
+    cursor: pointer;
+    @include Title;
+    font-weight: $Regular;
+    &:nth-child(1) {
+      background: $white;
+      color: $red;
+      border-bottom-left-radius: 5px;
+      &:hover {
+        background: #fdfdfd;
+      }
+    }
+    &:nth-child(2) {
+      background: $light-blue;
+      color: $white;
+      border-bottom-right-radius: 5px;
+      &:hover {
+        background: #3982d7;
+      }
+    }
+  }
+}

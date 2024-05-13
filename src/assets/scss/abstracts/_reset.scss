@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button {
+  border: none;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}

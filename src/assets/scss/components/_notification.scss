@@ -1,0 +1,28 @@
+@use '../abstracts/' as *;
+
+.popup {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: $normal;
+  color: #fff;
+  border-radius: 5px;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.popup.loading {
+  opacity: 1;
+}
+
+.popup.success {
+  opacity: 1;
+  background-color: $success;
+}
+
+.popup.error {
+  opacity: 1;
+  background-color: $error;
+}

@@ -1,0 +1,83 @@
+@use './color' as *;
+@use './breakpoints' as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+$font-family: 'Roboto', sans-serif;
+$Medium: 500;
+$Regular: 400;
+
+// RWD 用 root font-size 控制文字大小
+:root {
+  font-size: 12px;
+  @include breakpoint($md) {
+    font-size: 16px;
+  }
+}
+@mixin NavTitle {
+  font-family: $font-family;
+  font-weight: $Regular;
+  font-size: 1.5rem;
+  line-height: 1.16;
+  color: $blue;
+  text-align: center;
+}
+
+@mixin NavTitleHover {
+  font-weight: $Medium;
+  color: $white;
+}
+
+@mixin AddIcon {
+  font-family: $font-family;
+  font-weight: $Regular;
+  font-size: 1.5rem;
+  color: $gray-300;
+  text-align: initial;
+}
+
+@mixin Title {
+  font-family: $font-family;
+  font-weight: $Medium;
+  font-size: 1.5rem;
+  line-height: 1.16;
+}
+@mixin TitleLineThrough {
+  cursor: not-allowed;
+  text-decoration: line-through;
+  color: $gray-300;
+}
+@mixin Subtitle {
+  font-family: $font-family;
+  font-weight: $Medium;
+  font-size: 1.25rem;
+  line-height: 1.2;
+}
+@mixin Paragraph {
+  font-family: $font-family;
+  font-weight: $Regular;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+@mixin Remark {
+  font-family: $font-family;
+  font-weight: $Regular;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $gray-400;
+}
+
+@mixin Placeholder {
+  font-family: $font-family;
+  font-weight: $Regular;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: $gray-400;
+}
+
+@mixin Status {
+  font-family: $font-family;
+  font-weight: $Regular;
+  font-size: 1.5rem;
+  font-style: italic;
+  color: $gray-300;
+}
