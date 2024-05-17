@@ -18,7 +18,11 @@ const router = createRouter({
       path: '/completed',
       name: 'completed',
       component: () => import('@/views/CompletedView.vue')
-    }
+    },
+    {
+      path: "/:pathMatch(.*)*",
+      redirect: { name: "Home" },
+    },
   ]
 })
 
